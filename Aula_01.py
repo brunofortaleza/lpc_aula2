@@ -27,6 +27,9 @@ class Atividade:
         self.data_inicio = data_inicio
         self.data_fim = data_fim
 
+class Endereco:
+    pass
+
 
 p=Pessoa('Bruno', '25/01/1993')
 pj = Projeto ('Larisse', "08/02/2019", "15/02/2019")
