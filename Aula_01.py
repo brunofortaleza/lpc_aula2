@@ -1,3 +1,6 @@
+from pip._internal.cli.cmdoptions import prefer_binary
+
+
 class Projeto:
     def __init__(self, nome, data_inicio, data_fim):
         self.nome = nome
@@ -19,17 +22,22 @@ class Pessoa:
 
 class Atividade:
 
-    def __init__(self, nome, prioridade, pessoa, projeto, data_inicio, data_fim):
+    def __init__(self, nome, prioridade, pessoa, data_inicio, data_fim):
         self.nome = nome
         self.prioridade = prioridade
         self.pessoa = pessoa
-        self.projeto = projeto
         self.data_inicio = data_inicio
         self.data_fim = data_fim
 
-class Endereco:
-    pass
 
+class ProjetoAtividade:
+    def __str__(self, projeto, atividade):
+        self.projeto = projeto
+        self.atividade = atividade
+
+    def __str__(self):
+        return " Projeto " + self.projeto + " Ativdade " + self.atividade
+    
 
 p=Pessoa('Bruno', '25/01/1993')
 pj = Projeto ('Larisse', "08/02/2019", "15/02/2019")
